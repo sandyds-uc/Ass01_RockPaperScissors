@@ -10,7 +10,6 @@ public class RockPaperScissors // class RockPaperScissors
         int playerAWins = 0; // num playerAWins = 0
         int playerBWins = 0; // num playerBWins = 0
         String isDone = "N"; // String isDone = “N”
-        String trash = ""; // String trash for bad isDone input
         Scanner in = new Scanner(System.in);
 
         do // input validation checker
@@ -98,8 +97,7 @@ public class RockPaperScissors // class RockPaperScissors
             }
             else // trash response to isDone question
             {
-                trash = in.nextLine(); // capture trash input in trash variable
-                System.out.println("Illegal Entry: " + trash); // throw trash back at user
+                System.out.println("Illegal Entry: " + isDone); // throw trash back at user
                 System.out.println("You will play again."); // force user to play again for talking trash
                 isDone = "N"; // keep isDone == N
             }
